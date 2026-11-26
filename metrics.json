@@ -1,0 +1,228 @@
+{
+  "student": "Георги Младенов Калпакчиев",
+  "variant": "А",
+  "dataset": {
+    "rows": 1000,
+    "features": 13,
+    "missing_cells": 18,
+    "price_min": 1000.0,
+    "price_median": 8800.0,
+    "price_max": 67150.0
+  },
+  "split": {
+    "train": 800,
+    "test": 200
+  },
+  "decision_tree": {
+    "best_params": {
+      "max_depth": 8,
+      "min_samples_leaf": 1,
+      "min_samples_split": 2
+    },
+    "cv_mae": 1953.6469478897204,
+    "test": {
+      "MAE": 2125.7955344222246,
+      "RMSE": 3145.6023945223624,
+      "R2": 0.8646781560268266,
+      "MAPE_pct": 20.67640138753199
+    }
+  },
+  "random_forest": {
+    "best_params": {
+      "max_depth": null,
+      "max_features": 0.5,
+      "min_samples_leaf": 1
+    },
+    "cv_mae": 1438.4921715324526,
+    "test": {
+      "MAE": 1290.825433828954,
+      "RMSE": 1857.3148148780604,
+      "R2": 0.9528228936638167,
+      "MAPE_pct": 13.024880355289426
+    }
+  },
+  "baseline": {
+    "test": {
+      "MAE": 6390.565625,
+      "RMSE": 8562.776187379666,
+      "R2": -0.0027425381514409874,
+      "MAPE_pct": 95.30380891457477
+    }
+  },
+  "cross_validation_rf": {
+    "MAE_mean": 1438.4921715324526,
+    "MAE_std": 204.16589290641724,
+    "RMSE_mean": 2304.63671427176,
+    "R2_mean": 0.948919049282282,
+    "R2_std": 0.011977551657362681
+  },
+  "residuals": {
+    "mean": 22.745122051022996,
+    "std": 1857.1755385499796,
+    "p05": -2546.6504185751337,
+    "p95": 2729.611857681263
+  },
+  "worst_errors": [
+    {
+      "make": "Mercedes",
+      "model": "GLC",
+      "year": 2020,
+      "mileage_km": 52000,
+      "actual": 37650.0,
+      "predicted": 29775.228799258686,
+      "error": 7874.771200741314
+    },
+    {
+      "make": "BMW",
+      "model": "3 Series",
+      "year": 2024,
+      "mileage_km": 29000,
+      "actual": 48350.0,
+      "predicted": 40706.99432144393,
+      "error": 7643.005678556066
+    },
+    {
+      "make": "Audi",
+      "model": "A4",
+      "year": 2021,
+      "mileage_km": 49000,
+      "actual": 19200.0,
+      "predicted": 25466.215110500572,
+      "error": -6266.215110500572
+    },
+    {
+      "make": "Dacia",
+      "model": "Sandero",
+      "year": 2023,
+      "mileage_km": 27000,
+      "actual": 10100.0,
+      "predicted": 15903.0070013866,
+      "error": -5803.007001386601
+    },
+    {
+      "make": "VW",
+      "model": "Golf",
+      "year": 2024,
+      "mileage_km": 31000,
+      "actual": 28350.0,
+      "predicted": 22773.84088748012,
+      "error": 5576.159112519879
+    }
+  ],
+  "feature_importance": [
+    {
+      "feature": "year",
+      "importance": 0.45107412588923274
+    },
+    {
+      "feature": "mileage_km",
+      "importance": 0.19579498250177274
+    },
+    {
+      "feature": "power_hp",
+      "importance": 0.10484404386619506
+    },
+    {
+      "feature": "body_type",
+      "importance": 0.09676577767200438
+    },
+    {
+      "feature": "brand_segment",
+      "importance": 0.06155288542102439
+    },
+    {
+      "feature": "model",
+      "importance": 0.01751755776666001
+    },
+    {
+      "feature": "engine_cc",
+      "importance": 0.014939374786030416
+    },
+    {
+      "feature": "make",
+      "importance": 0.01323109276707474
+    },
+    {
+      "feature": "owners",
+      "importance": 0.01257972578810263
+    },
+    {
+      "feature": "transmission",
+      "importance": 0.012425115168935477
+    },
+    {
+      "feature": "condition",
+      "importance": 0.010594236241204124
+    },
+    {
+      "feature": "fuel_type",
+      "importance": 0.004746830097090219
+    },
+    {
+      "feature": "service_history",
+      "importance": 0.00393425203467312
+    }
+  ],
+  "feature_importance_individual": [
+    {
+      "feature": "num__year",
+      "importance": 0.4510741258892327
+    },
+    {
+      "feature": "num__mileage_km",
+      "importance": 0.1957949825017727
+    },
+    {
+      "feature": "num__power_hp",
+      "importance": 0.10484404386619504
+    },
+    {
+      "feature": "cat__body_type_hatchback",
+      "importance": 0.08808595135891734
+    },
+    {
+      "feature": "num__brand_segment",
+      "importance": 0.061552885421024384
+    },
+    {
+      "feature": "num__engine_cc",
+      "importance": 0.014939374786030414
+    },
+    {
+      "feature": "num__owners",
+      "importance": 0.012579725788102628
+    },
+    {
+      "feature": "cat__transmission_manual",
+      "importance": 0.006425904144773427
+    },
+    {
+      "feature": "cat__body_type_SUV",
+      "importance": 0.006222623429497719
+    },
+    {
+      "feature": "cat__transmission_automatic",
+      "importance": 0.005999211024162048
+    },
+    {
+      "feature": "cat__condition_fair",
+      "importance": 0.00580206438134579
+    },
+    {
+      "feature": "cat__make_Dacia",
+      "importance": 0.004149921017109789
+    },
+    {
+      "feature": "cat__model_Sandero",
+      "importance": 0.003818991570359907
+    },
+    {
+      "feature": "cat__condition_excellent",
+      "importance": 0.003335595499156103
+    },
+    {
+      "feature": "cat__body_type_sedan",
+      "importance": 0.002457202883589303
+    }
+  ]
+}
